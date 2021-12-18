@@ -49,7 +49,7 @@
                         <ProjectBox :projectData="data" @click="showModalF(data)"></ProjectBox>
                     </swiper-slide>
                 </swiper>
-                <div class="fixed bottom-0 left-0 bg-maincolor p-4 w-full z-10  xl:bg-maincolor xl:w-56 lg:bg-maincolor  xl:absolute lg:absolute xl:bottom-22 xl:right-20 xl:left-auto lg:bottom-28 lg:right-20">
+                <div v-if="projectData.length > 4" class="fixed bottom-0 left-0 bg-maincolor p-4 w-full z-10  xl:bg-maincolor xl:w-56 lg:bg-maincolor  xl:absolute lg:absolute xl:bottom-22 xl:right-20 xl:left-auto lg:bottom-28 lg:right-20">
                    <div class="flex justify-center xl:block lg:block">
                         <div>
                             <button @click="prev"><img src="@/assets/prevarr.png"></button>
@@ -203,25 +203,21 @@ export default {
     display: block ;
 }
 .text-dec{
-    transition: 0.3s;
      font-family: "markgeocapslight";
 }
 
 .text-dec:hover{
     color: #00263F;
-    transition: 0.3s;
     font-family: "markgeobold";
 }
 
 .active-class-main{
     color: #00263F;
-    transition: 0.3s;
     font-family: "markgeobold";   
 }
 .text-dec:hover .arrow-none{
     display: block !important;
     color: #00263F;
-    transition: 0.4s;
     font-family: "markgeobold";
 }
 

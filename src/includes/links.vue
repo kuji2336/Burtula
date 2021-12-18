@@ -1,23 +1,23 @@
 <template>
-  <ul class="list-none flex items-center justify-between" :class="[styledProp ? 'styled-mob' : '']">
-    <li>
-      <router-link to="/" class="text-white mark-geo-regular pb-2"
+  <ul class="list-none flex items-center justify-center" :class="[styledProp ? 'styled-mob' : '']">
+    <li class="xl:mx-8 lg:mx-8">
+      <router-link to="/" class="text-white mark-geo-regular pb-2 "
         >About</router-link
       >
     </li>
-    <li>
+    <li class="xl:mx-8 lg:mx-8">
       <router-link
         to="/projects/logobrand"
         class="text-white mark-geo-regular pb-2"
         >Our Work</router-link
       >
     </li>
-    <li>
+    <li class="xl:mx-8 lg:mx-8">
       <router-link to="/team" class="text-white mark-geo-regular pb-2"
         >Team</router-link
       >
     </li>
-    <li>
+    <li class="xl:mx-8 lg:mx-8 contact-section">
       <router-link to="/contact" class="text-white mark-geo-regular pb-2"
         >Contact</router-link
       >
@@ -42,7 +42,7 @@ export default {
     margin-top: 80px;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 18%);
+    transform: translate(-40%, 18%);
     font-size: 30px;
    }
 

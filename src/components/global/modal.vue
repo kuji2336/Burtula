@@ -1,7 +1,7 @@
 <template>   
     <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container relative">
+      <div class="modal-wrapper" @click="closeModal($event)" id="wrapper">
+        <div class="modal-container relative z-30">
           <div class="absolute right-8" @click="$emit('close')">
               <img src="@/assets/close.png" class="h-5 cursor-pointer">
           </div>
@@ -27,7 +27,11 @@
 export default {
     props:['modalData'],
     methods:{
-
+      closeModal(event){
+        if(event.target.id == 'wrapper'){
+          this.$emit('close')
+        }
+      }
     }
 }
 </script>

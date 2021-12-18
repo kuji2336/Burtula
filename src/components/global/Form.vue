@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="xl:w-1/2 lg:w-1/2">
-     <Form  action="https://formsubmit.co/Burtulacreative@gmail.com" method="POST">
+     <Form  action="https://formsubmit.co/info@burtula.com" method="POST">
       <div class="flex flex-wrap justify-between p-7 xl:ml-5 lg:ml-5">
         <div class="w-1/2  my-2 pr-2">
           <Field name="name" type="text" placeholder="Name"  :rules="isRequired" class="appearance-none block w-full bg-transparent text-white border border-gray-200 rounded py-3 px-3 leading-tight focus:outline-none mark-geo-light"></Field>

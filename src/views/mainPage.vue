@@ -16,8 +16,10 @@
           <router-link to="/contact" class="hidden xl:block lg:block">
             <BaseButton
               class="mt-5 p-3 "
+              @mouseenter="setColored"
+              @mouseleave="removeColored"
               :color="'#FFFFFF'"
-              :backgroundColor="'#EE3A25'"
+              :backgroundColor="[colored ? '#B92412' : '#EE3A25']"
               :width="'180px'"
               :borderRadius="'5px'"
             >
@@ -36,7 +38,7 @@
         </div>
         <router-link to="/contact" class="block text-center xl:hidden lg:hidden">
             <BaseButton
-              class="mt-5 p-3"
+              class="mt-5 p-3 contact-section"
               :color="'#FFFFFF'"
               :backgroundColor="'#EE3A25'"
               :width="'220px'"
@@ -56,10 +58,30 @@ export default {
   components: {
     BaseButton,
   },
+  data(){
+    return{
+      colored:false
+    }
+  },
+
+  methods:{
+    setColored(){
+      this.colored = true
+    },
+    removeColored(){
+      this.colored = false
+    }
+  }
 };
 </script>
-<style scoped>
+<style>
 .height-main {
   height: 750px;
+}
+
+@media(max-width:1121px){
+  html,body{
+  overflow-y: auto;
+}
 }
 </style>
