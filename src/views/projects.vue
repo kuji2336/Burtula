@@ -4,9 +4,9 @@
             <div class="block pt-12 xl:hidden lg:hidden relative top-8 pl-4 pr-4">
                 <div class="flex items-center justify-between">
                     <BreadCrumbs/>
-                    <div>
+                    <!-- <div>
                      <img src="@/assets/filter.png" height="30" width="30" @click="curtain=true">
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <img src="@/assets/fullcircle.png" class="hidden xl:block lg:block main-img">
@@ -43,7 +43,7 @@
                 <div class="flex justify-center p-40 mx-auto" v-if="loader">
                     <img src="@/assets/loader2.gif" class="ml-28">
                 </div>
-                <div class="mx-auto pl-5 pr-5 xl:pl-56 xl:pr-6 lg:pl-56 lg:pr-6" v-else>
+                <div class="mx-auto pl-5 pr-5 xl:pl-56 xl:pr-6 lg:pl-56 lg:pr-6 2xl:pl-96" v-else>
                 <swiper :breakpoints="swiperOptions.breakpoints"  id="swiperSlide"  slides-per-column-fill="row" :space-between='20'>
                     <swiper-slide v-for="(data, index) in projectData" :key="index" :virtualIndex="index">
                         <ProjectBox :projectData="data" @click="showModalF(data)"></ProjectBox>
@@ -69,7 +69,6 @@
                   <ModalMob  :modalData="modalData" v-if="showModal" @close='showModal = false'/>
                 </transition>
             </div>
-            <Curtain :curatinStatus="curtain" @closeCurtain="curtain =false"/>
         </div>
     </div>
 </template>
@@ -81,7 +80,6 @@ import ProjectBox from '../components/global/projectBox.vue'
 import Modal from '../components/global/modal.vue'
 import ModalMob from '../components/modalmob.vue'
 import BreadCrumbs from '../components/breadcrumbs.vue'
-import Curtain from '../components/curtain.vue'
 import SwiperCore, { Virtual, Navigation} from "swiper";
 import { Swiper, SwiperSlide} from "swiper/vue";
 import "swiper/swiper-bundle.css";
@@ -130,7 +128,6 @@ export default {
         SwiperSlide,
         Modal,
         ModalMob,
-        Curtain,
         BreadCrumbs
     },
 

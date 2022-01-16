@@ -1,15 +1,15 @@
 <template>
   <div class="bg bg-maincolor">
     <div class="container mx-auto">
-      <div class="icons-mob block xl:hidden lg:hidden pt-28 pl-20 pr-20">
+      <div class="icons-mob block xl:hidden lg:hidden pt-28 pl-28 pr-20">
           <div class="flex  justify-between">
-             <a href="#">
+             <a target="_blank" href="https://www.facebook.com/burtulacreative">
                 <img src="../assets/fb.png" class="h-12" />
              </a>
-             <a href="#">
+             <a target="_blank" href="https://www.instagram.com/burtulacreative">
                  <img src="../assets/insta.png" class="h-12" />
              </a>
-             <a href="#">
+             <a target="_blank" href="https://www.linkedin.com/company/burtula/">
                 <img src="../assets/lin.png" class="h-12" />
              </a>
           </div>
@@ -21,10 +21,12 @@
               src="../assets/right.svg"
               class="h-12 2xl:left-10 xl:absolute xl:-left-12 -top-10"
             />
-            <img
+            <a target="_blank" href="https://www.linkedin.com/company/burtula/">
+              <img
               src="../assets/lin.png"
               class="h-12 absolute 2xl:left-64 left-40 -top-2"
-            />
+              />
+            </a>
           </div>
         </div>
         <!--  circle -->
@@ -39,7 +41,9 @@
         </div>
         <div class="icon absolute top-40 2xl:left-28 xl:left-14">
           <div class="relative w-64">
-            <img src="../assets/fb.png" class="h-12" />
+            <a href="https://www.facebook.com/burtulacreative" target="_blank">
+                <img src="../assets/fb.png" class="h-12" />
+            </a>
             <img
               src="../assets/long.svg"
               class="h-12 absolute -top-5 lef le left-9"
@@ -57,7 +61,9 @@
           "
         >
           <div class="relative w-64">
-            <img src="../assets/insta.png" class="h-12" />
+            <a target="_blank" href="https://www.instagram.com/burtulacreative">
+              <img src="../assets/insta.png" class="h-12" />
+            </a>
             <img
               src="../assets/short.svg"
               class="h-14 absolute -top-11 left-9"
@@ -65,15 +71,10 @@
           </div>
         </div>
       </div>
-      <Form/>
+      <div class="2xl:pt-10">
+         <Form/>
+      </div>
     </div>
-<!--     <form action="https://formsubmit.co/quji.bolqvadze123@gmail.com" method="POST">
-     <input type="text" name="_subject" value="burtula" required>
-     <input type="email" name="email" value="guest@gmail.com" required>
-     <input type="hidden" name="_next" value="http://localhost:8080/"> 
-     <input type="text" name="message" value="hello quji">
-     <button type="submit">Send</button>
-   </form> -->
   </div>
 </template>
 

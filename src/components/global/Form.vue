@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap pt-12 xl:pt-0 lg:pt-0  justify-center xl:flex-nowrap lg:flex-nowrap max-w-6xl mx-auto pb-5">
+  <div class="flex flex-wrap pt-12 xl:pt-0 lg:pt-0 pb-5 justify-center xl:flex-nowrap lg:flex-nowrap max-w-6xl mx-auto xl:pl-12 xl:pr-12 lg:pl-12 lg:pr-12 2xl:pb-60">
     <div class="icons w-full xl:w-1/2 lg:w-1/2">
       <div class="flex pl-6 xl:pl-0 lg:pl-0 xl:justify-center lg:justify-center mt-2 xl:mt-16 lg:mt-16 xl:pt-0 lg:pt-0">
           <ContactDetails/>

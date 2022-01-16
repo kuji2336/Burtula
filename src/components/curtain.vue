@@ -1,74 +1,56 @@
 <template>
-  <div
-    class="
-      block
-      h-full
-      bg-maincolor
-      fixed
-      z-10
-      left-0
-      w-full
-      xl:hidden
-      lg:block
-      pt-28
-      pl-3
-      pr-3
-    "
-    :class="[curatinStatus ? 'top-0' : '-top-full']"
-  >
-    <div class="flex items-center justify-between flex-wrap">
-      <div class="w-full p-4 bg-baseorange rounded-lg mb-4" @click="hideCurtain">
-        <router-link to="/projects/logobrand">
-         <div class="flex justify-between items-center">
-             <div class="w-full mark-geo-regular text-maincolor">Logo & Branding</div>
-             <img src="@/assets/branding.png" class="h-14 w-14">
-         </div>
-        </router-link>
-      </div>
-      <div class="w-full p-4 bg-baseorange rounded-lg mb-4" @click="hideCurtain">
-      <router-link to="/projects/socialmedia">
-        <div class="flex justify-between items-center">
-          <div class="w-full mark-geo-regular text-sm text-maincolor">Social media & Graphic Design</div>
-          <img src="@/assets/bullhorn.png" class="h-14 w-14">
-        </div>
+  <div>
+    <li>
+      <router-link to="/projects/logobrand" class="text-base text-white">
+        Logo & Branding
       </router-link>
-      </div>
-      <div class="w-full p-4 bg-baseorange rounded-lg mb-4" @click="hideCurtain">
-       <router-link to="/projects/animation">
-       <div class="flex justify-between items-center">
-          <div class="w-full mark-geo-regular text-maincolor">Animation</div>
-          <img src="@/assets/animation.png" class="h-14 w-14">
-       </div>
-       </router-link>
-      </div>
-      <div class="w-full p-4 bg-baseorange rounded-lg mb-4" @click="hideCurtain">
-      <router-link to="/projects/uiweb">
-        <div class="flex justify-between items-center">
-           <div class="w-full mark-geo-regular text-maincolor">UI/UX design</div>
-           <img src="@/assets/web-design.png" class="h-14 w-14">
-        </div>
+    </li>
+    <li>
+      <router-link
+        to="/projects/socialmedia"
+        class="text-base text-white wrap-1 my-3"
+        >Social media & Graphic Design</router-link
+      >
+    </li>
+    <li>
+      <router-link to="/projects/animation" class="text-base text-white">
+        Animation
       </router-link>
-      </div>
-    </div>
+    </li>
+    <li>
+      <router-link to="/projects/uiweb" class="text-base text-white">
+        UI/UX design
+      </router-link>
+    </li>
   </div>
 </template>
 
 <script>
 export default {
-   props:{
-     curatinStatus:{
-       type:Boolean
-     }
-   },
-   data(){
-       return{
-           showDrop:true
-       }
-   },
-    methods:{
-        hideCurtain(){
-           this.$emit('closeCurtain')
-        }
+  props: {
+    curatinStatus: {
+      type: Boolean,
     },
-}
+  },
+  data() {
+    return {
+      showDrop: true,
+    };
+  },
+  methods: {
+    hideCurtain() {
+      this.$emit("closeCurtain");
+    },
+  },
+};
 </script>
+
+<style scoped>
+.wrap-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>

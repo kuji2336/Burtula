@@ -1,12 +1,12 @@
 <template>
-    <div class="header bg-maincolor pt-4 pb-4 pr-12 pl-12">
+    <div class="header bg-maincolor pt-4 pb-4 pr-28 pl-28">
         <div class="header flex justify-between items-center">
            <div class="w-1/2">
              <router-link to="/"> 
-                 <img src="../assets/burtulalogo.svg" class="object-contain h-10 relative z-50" :class="[routerLocation ? 'ml-32' :'']">
+                 <img src="../assets/burtulalogo.svg" class="object-contain h-10 relative z-50">
               </router-link>
            </div>
-           <div class="w-1/2 pl-12 pr-12">
+           <div class="w-1/2">
               <Links />
            </div>
         </div>
